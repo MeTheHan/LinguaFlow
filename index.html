@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand">🌐 LinguaFlow</h1>
+    <div class="controls">
+      <select id="fromLang">
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="ru">Русский</option>
+        <option value="zh-CN">中文 (简体)</option>
+        <option value="zh-TW">中文 (繁體)</option>
+        <option value="ja">日本語</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="ar">العربية</option>
+      </select>
+      <button onclick="swapLanguages()">⇄</button>
+      <select id="toLang">
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="ru">Русский</option>
+        <option value="zh-CN">中文 (简体)</option>
+        <option value="zh-TW">中文 (繁體)</option>
+        <option value="ja">日本語</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <textarea id="inputText" placeholder="Metin gir..." onkeyup="autoTranslate()"></textarea>
+    <button onclick="translateText()">Çevir</button>
+    <button onclick="speakText()">🔊 Sesli Oku</button>
+    <button onclick="copyTranslation()">📋 Kopyala</button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <div id="output" class="output">💡 Çeviri burada görünecek</div>
+
+    <h2>📜 Geçmiş</h2>
+    <ul id="historyList"></ul>
+    <button onclick="clearHistory()">Geçmişi Temizle</button>
+
+    <h2>⭐ Favoriler</h2>
+    <ul id="favoritesList"></ul>
+    <button onclick="clearFavorites()">Favorileri Temizle</button>
+
+    <footer>
+      <button class="youtube-btn" onclick="window.open('https://www.youtube.com/@MTechnow','_blank')">▶️ YouTube</button>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
